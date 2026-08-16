@@ -19,7 +19,6 @@ export type SkillGroup = {
 export const resume = {
   name: "Ryan Kristopher Bartolome",
   location: "Philippines",
-  phone: "+63 917 881 4481",
   email: "rk_bart@yahoo.com",
   github: "https://github.com/rkbart",
   githubUsername: "rkbart",
