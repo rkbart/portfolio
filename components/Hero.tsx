@@ -42,7 +42,7 @@ export default function Hero() {
           </a>
         </div>
         <p className="mt-10 font-mono text-xs text-muted">
-          {resume.location} · {resume.phone} · {resume.email}
+          {resume.location} · {resume.email}
         </p>
       </div>
     </section>
