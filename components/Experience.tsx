@@ -4,20 +4,25 @@ import { resume } from "@/data/resume";
 export default function Experience() {
   return (
     <Section id="experience" title="Experience">
-      <ol className="relative space-y-10 border-l border-border pl-6">
+      <ol className="space-y-10">
         {resume.experience.map((job) => (
-          <li key={`${job.role}-${job.company}`} className="relative">
-            <span className="absolute -left-[1.85rem] top-1.5 h-3 w-3 rounded-full border-2 border-accent bg-background" />
+          <li key={`${job.role}-${job.company}`} className="relative pl-6">
+            <span
+              className="absolute -left-0 top-2 h-8 w-0.5 bg-red/70"
+              aria-hidden="true"
+            />
             <div className="flex flex-wrap items-baseline justify-between gap-2">
-              <h3 className="font-semibold text-foreground">{job.role}</h3>
+              <h3 className="font-display text-xl font-medium text-ink">
+                {job.role}
+              </h3>
               <p className="font-mono text-xs text-muted">{job.period}</p>
             </div>
-            <p className="mt-0.5 text-sm text-accent">{job.company}</p>
-            <ul className="mt-3 space-y-2">
+            <p className="mt-1 text-sm font-medium text-blue">{job.company}</p>
+            <ul className="mt-4 space-y-2.5">
               {job.bullets.map((bullet) => (
                 <li
                   key={bullet}
-                  className="text-sm leading-relaxed text-muted"
+                  className="max-w-2xl text-sm leading-relaxed text-muted"
                 >
                   {bullet}
                 </li>

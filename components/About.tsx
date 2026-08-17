@@ -18,16 +18,16 @@ export default function About() {
         scalable APIs, clean architecture, and products that feel effortless
         to use.
       </p>
-      <dl className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <dl className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
         {quickFacts.map((fact) => (
           <div
             key={fact.label}
-            className="rounded-lg border border-border bg-surface p-4"
+            className="border-t-2 border-red/60 px-4 py-4"
           >
             <dt className="font-mono text-xs uppercase tracking-wider text-muted">
               {fact.label}
             </dt>
-            <dd className="mt-1 text-sm text-foreground">{fact.value}</dd>
+            <dd className="mt-1 text-sm text-ink">{fact.value}</dd>
           </div>
         ))}
       </dl>

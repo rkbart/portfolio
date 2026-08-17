@@ -9,20 +9,20 @@ const navItems = [
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur">
-      <nav className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3 sm:px-6">
+    <header className="sticky top-0 z-50 border-b border-rule bg-paper/90 backdrop-blur">
+      <nav className="mx-auto flex max-w-4xl items-center justify-between px-4 py-4 sm:px-6">
         <a
           href="#top"
-          className="font-mono text-sm font-semibold tracking-tight text-foreground"
+          className="font-display text-lg font-semibold tracking-tight text-ink"
         >
-          rkbart<span className="text-accent">.</span>
+          rkbart<span className="text-red">.</span>
         </a>
-        <ul className="hidden items-center gap-1 sm:flex">
+        <ul className="hidden items-center gap-6 sm:flex">
           {navItems.map((item) => (
             <li key={item.href}>
               <a
                 href={item.href}
-                className="rounded-md px-3 py-1.5 text-sm text-muted transition-colors hover:bg-surface hover:text-foreground"
+                className="text-sm text-muted transition-colors hover:text-ink"
               >
                 {item.label}
               </a>
@@ -31,7 +31,7 @@ export default function Header() {
         </ul>
         <a
           href="#contact"
-          className="rounded-md border border-accent/40 px-3 py-1.5 text-sm font-medium text-accent transition-colors hover:bg-accent/10 sm:hidden"
+          className="rounded-full border border-rule px-4 py-1.5 text-sm font-medium text-ink transition-colors hover:border-blue hover:text-blue sm:hidden"
         >
           Contact
         </a>

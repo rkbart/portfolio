@@ -10,17 +10,17 @@ export default function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} className="scroll-mt-20 py-16 sm:py-24">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6">
-        <div className="mb-8 flex items-baseline gap-3">
-          <h2 className="text-xl font-bold tracking-tight text-foreground sm:text-2xl">
+    <section id={id} className="scroll-mt-24 py-16 sm:py-24">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6">
+        <div className="mb-10">
+          <h2 className="font-display text-3xl font-medium tracking-tight text-ink sm:text-4xl">
+            <span className="mr-3 text-red">✳</span>
             {title}
           </h2>
-          <span className="font-mono text-sm text-accent">#</span>
+          {subtitle ? (
+            <p className="mt-3 max-w-2xl text-muted">{subtitle}</p>
+          ) : null}
         </div>
-        {subtitle ? (
-          <p className="mb-8 max-w-2xl text-muted">{subtitle}</p>
-        ) : null}
         {children}
       </div>
     </section>

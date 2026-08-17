@@ -40,6 +40,11 @@ yarn-error.log*
 .opencode/
 .specify/
 
+# agent skills (installed locally, not source)
+.agents/
+.claude/
+skills-lock.json
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

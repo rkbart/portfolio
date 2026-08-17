@@ -1,25 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0b0f14;
-  --foreground: #e6edf3;
-  --muted: #8b949e;
-  --accent: #58a6ff;
-  --accent-dim: #1f6feb;
-  --border: #21262d;
-  --surface: #10161d;
+  --paper: #e8d9b4;
+  --paper-deep: #dccca4;
+  --ink: #2a2114;
+  --muted: #6b5f44;
+  --rule: #c6b68c;
+  --blue: #1e4e96;
+  --blue-deep: #143767;
+  --red: #b0352a;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-paper: var(--paper);
+  --color-paper-deep: var(--paper-deep);
+  --color-ink: var(--ink);
   --color-muted: var(--muted);
-  --color-accent: var(--accent);
-  --color-accent-dim: var(--accent-dim);
-  --color-border: var(--border);
-  --color-surface: var(--surface);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-rule: var(--rule);
+  --color-blue: var(--blue);
+  --color-blue-deep: var(--blue-deep);
+  --color-red: var(--red);
+  --font-sans: var(--font-instrument-sans), system-ui, sans-serif;
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-mono: var(--font-ibm-plex-mono), ui-monospace, monospace;
 }
 
 html {
@@ -27,12 +30,17 @@ html {
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
 }
 
 ::selection {
-  background: var(--accent-dim);
-  color: #fff;
+  background: var(--blue);
+  color: var(--paper);
+}
+
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
 }

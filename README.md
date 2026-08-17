@@ -29,8 +29,7 @@ Live site: <https://portfolio-azure-omega-12.vercel.app>
 ├── public/
 │   └── resume.pdf          # Resume download file
 ├── specs/                  # spec-kit SDD workflow documents
-├── checklists/             # spec-kit requirements checklists
-└── .openwikiignore         # OpenWiki ignore rules (agent wiki tooling)
+└── checklists/             # spec-kit requirements checklists
 ```
 
 ## Getting Started
@@ -85,16 +84,3 @@ specify check   # verify requirements
 - Requirements: `checklists/requirements.md`
 
 `.specify/` and `.opencode/` are git-ignored (they contain tooling state, not source).
-
-## Agent Documentation (OpenWiki)
-
-[OpenWiki](https://github.com/langchain-ai/openwiki) is installed globally for maintaining agent-facing project documentation (a wiki linked from `AGENTS.md`). It is not yet initialized because it needs a supported LLM provider API key. When a key is available:
-
-```bash
-export OPENWIKI_PROVIDER=gemini   # or another supported provider
-export GEMINI_API_KEY=...         # set your key
-openwiki --init                   # generate the wiki in openwiki/
-openwiki --update                 # refresh docs when the code changes
-```
-
-Ignored paths for the wiki live in `.openwikiignore`.
