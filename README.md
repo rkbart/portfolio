@@ -2,7 +2,7 @@
 
 A single-page portfolio website built with **Next.js (App Router)**, **TypeScript**, and **Tailwind CSS v4**. It presents a resume and a curated selection of GitHub projects, fetching live project data from the GitHub API at build time.
 
-Live site: <https://portfolio-azure-omega-12.vercel.app>
+Live site: <https://rkbart.vercel.app>
 
 ## Tech Stack
 
